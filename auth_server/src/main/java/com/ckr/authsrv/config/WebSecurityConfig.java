@@ -3,6 +3,7 @@ package com.ckr.authsrv.config;
 import com.ckr.authsrv.security.CustomizedPermissionEvaluator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.Ordered;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -16,16 +17,16 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
  */
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
 
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http
+        http.csrf().disable();
 
-                .authorizeRequests()
-                .anyRequest()
-                .permitAll().and().httpBasic();
+//                .authorizeRequests()
+//                .anyRequest()
+//                .permitAll().and().httpBasic();
 
 
 
@@ -54,6 +55,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public PermissionEvaluator permissionEvaluator(){
         return new CustomizedPermissionEvaluator();
     }
+
 
 
 }
