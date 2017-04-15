@@ -1,7 +1,8 @@
-.*
+/.*
 !.gitignore
 
 **/*.iml
 
 auth_server/target/
 portal/target/
+portal/src/main/webapp/portal-app/node_modules
