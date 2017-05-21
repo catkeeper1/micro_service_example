@@ -1,0 +1,35 @@
+server:
+  port: 8082
+
+
+#app:
+#  datasource:
+#    primary:
+#      type: org.apache.commons.dbcp2.BasicDataSource
+#      driverClassName: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://127.0.0.1/otms
+#      username: root
+#      password:
+#
+#  hibernate:
+#    primary:
+#      packagesToScan: com.ckr.maintenance
+#      hibernateProperties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.MySQL5Dialect
+#          connection:
+#            release_mode: on_close
+#          show_sql: true
+
+spring:
+  datasource:
+    type: org.apache.commons.dbcp2.BasicDataSource
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/otms
+
+logging:
+  level:
+    org.springframework:
+      web: DEBUG
+      orm: DEBUG
