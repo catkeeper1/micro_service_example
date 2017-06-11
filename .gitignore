@@ -6,6 +6,8 @@
 auth_server/target/
 portal/target/
 portal/src/main/webapp/portal-app/node_modules
+portal/src/main/webapp/portal-app/documentation
+portal/src/main/webapp/portal-app/dist
 maintenance/target/
 
 
