@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
 
+/**
+ * the main module
+ */
 @NgModule({
   declarations: [
     AppComponent,
